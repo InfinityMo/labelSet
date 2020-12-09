@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div class="title">
-      套装分类
+      联恩商品分类
     </div>
     <div class="content-wrap">
       <ul class="flex content-box">
@@ -18,12 +18,6 @@
                               :key="index">
                   <img :src="img"
                        @click="enlargeImg(img,item.image)">
-                  <!-- <el-image :src="img"
-                            :z-index="5000"
-                            :preview-src-list="item.image">
-                  </el-image> -->
-                  <!-- <span class="enlarge"
-                        @click="enlargeImg(img)"><i class="el-icon-zoom-in"></i></span> -->
                 </swiper-slide>
                 <div class="swiper-pagination"
                      slot="pagination">
@@ -116,7 +110,7 @@ export default {
           prevEl: '.swiper-button-prev'
         }
       },
-      total: 100,
+      total: 1,
       pageChange: {
         pageNum: 1,
         pageSize: 10
@@ -203,6 +197,7 @@ export default {
             const target = resultData.filter(i => i.id === cacheItem.id)[0]
             if (target) {
               target.cate = cacheItem.cate
+              target.valid = cacheItem.valid
             }
           })
         }
