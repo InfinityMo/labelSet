@@ -8,7 +8,9 @@ export default new Vuex.Store({
     spinning: false, // 加载loading的状态
     cacheData: [] // 当前页面剩余的数据
   },
-
+  getters: {
+    getCacheData: state => state.cacheData
+  },
   mutations: {
     // 突变配置加载loading的状态
     setSpinning (state, payload) {
