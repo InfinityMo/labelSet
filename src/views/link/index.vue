@@ -71,7 +71,6 @@
                      @current-change="currentChange"
                      :current-page="pageChange.pageNum"
                      :page-size="pageChange.pageSize"
-                     @next-click="nextClick"
                      layout="total, prev, pager, next, jumper"
                      :total="total">
       </el-pagination>
@@ -233,9 +232,9 @@ export default {
     currentChange (pageNum) {
       this.pageNumChange(pageNum)
     },
-    nextClick (pageNum) {
-      this.pageNumChange(pageNum)
-    },
+    // nextClick (pageNum) {
+    //   this.pageNumChange(pageNum)
+    // },
     toTmall (link) {
       window.open(link)
     },
